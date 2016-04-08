@@ -6,7 +6,7 @@ define export::create (
   $ensure  = 'present'
 ) {
   if $ensure != 'absent' {
-    $clientline = join(reverse(sort($clients)),' ')
+    $clientline = join(reverse(sort(flatten($clients))),' ')
     $line       = "${name} ${clientline}\n"
 
     concat { '/etc/exports':
