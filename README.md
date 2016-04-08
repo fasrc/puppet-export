@@ -3,7 +3,7 @@ What is this?
 
 This is a simple defined type that can be used to populate /etc/exports.
 
-The type depends on functions in [puppet's stdlib](https://github.com/puppetlabs/puppetlabs-stdlib).
+The type depends on functions in [puppet's stdlib](https://github.com/puppetlabs/puppetlabs-stdlib) and [concat](https://github.com/puppetlabs/puppetlabs-concat) modules.
 
 Usage
 -----
