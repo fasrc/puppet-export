@@ -9,6 +9,10 @@ define export::create (
     $clientline = join(reverse(sort($clients)),' ')
     $line       = "${name} ${clientline}\n"
 
+    concat { '/etc/exports':
+      ensure => present,
+  }
+
     concat::fragment { $name:
       target  => '/etc/exports',
       content => $line
